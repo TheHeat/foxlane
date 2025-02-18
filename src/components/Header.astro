@@ -1,0 +1,61 @@
+---
+import { Icon } from "astro-icon/components";
+import Foxlogo from "./Foxlogo.astro";
+---
+
+<div class="wrapper">
+	<header>
+		<Icon
+			name="fox-logotype"
+			class="name"
+		/>
+		<svg
+			class="logo"
+			viewBox="0 0 119 119"
+		>
+			<polygon
+				fill="var(--color-brand-300)"
+				points="0 0 49.55 99.09 69.36 99.09 118.91 0 0 0"
+			></polygon>
+			<polygon
+				fill="var(--color-brand-100)"
+				points="0 39.64 59.45 118.91 14.86 29.73 0 39.64"
+			></polygon>
+			<polygon
+				fill="var(--color-brand-100)"
+				points="59.45 118.91 118.91 39.64 104.05 29.73 59.45 118.91"
+			></polygon>
+			<path
+				fill="var(--color-brand-500)"
+				d="M49.55,99.09l9.91,19.82,9.91-19.82h-19.82ZM0,0v39.64l14.86-9.91L0,0ZM118.91,0l-14.86,29.73,14.86,9.91V0Z"
+			></path>
+		</svg>
+		<Icon name="instagram" />
+	</header>
+</div>
+
+<style>
+	.wrapper {
+		padding: 2rem 1rem;
+	}
+	header {
+		display: grid;
+		grid-template-columns: 1fr 6rem 1fr;
+		align-items: center;
+		background-color: var(--color-brand-500);
+		border-radius: 0.5rem;
+		padding: 1rem;
+	}
+
+	.logo {
+		display: block;
+		width: 6rem;
+		height: 6rem;
+		margin-block: -2rem;
+	}
+
+	.name {
+		width: auto;
+		height: 2rem;
+	}
+</style>
