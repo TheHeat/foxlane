@@ -1,0 +1,38 @@
+---
+import { Icon } from "astro-icon/components";
+
+const links = [
+	{
+		link: "https://www.instagram.com/one_fox_lane/",
+		icon: "instagram",
+	},
+	// {
+	// 	link: "https://eventbrite.com",
+	// 	icon: "eventbrite",
+	// },
+];
+---
+
+<div class="wrapper">
+	{
+		links.map((link) => (
+			<a href={link.link}>
+				<Icon
+					class="icon"
+					name={link.icon}
+				/>
+			</a>
+		))
+	}
+</div>
+
+<style>
+	.wrapper {
+		display: flex;
+		gap: 1rem;
+	}
+	.icon {
+		width: 2rem;
+		height: 2rem;
+	}
+</style>

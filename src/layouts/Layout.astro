@@ -22,8 +22,10 @@ import Header from "../components/Header.astro";
 		<title>Astro Basics</title>
 	</head>
 	<body>
-		<Header />
-		<slot />
+		<div class="page">
+			<Header />
+			<slot />
+		</div>
 	</body>
 </html>
 
@@ -41,6 +43,8 @@ import Header from "../components/Header.astro";
 		--color-text: var(--color-brand-100);
 
 		--font-headline: "Arbutus Slab", serif;
+
+		--length-spacer: clamp(1rem, 1rem + 2vw, 2rem);
 	}
 	html,
 	body {
@@ -50,5 +54,10 @@ import Header from "../components/Header.astro";
 		min-height: 100vh;
 		background-color: var(--color-surface);
 		color: var(--color-text);
+	}
+
+	.page {
+		margin: auto;
+		max-width: max(75vw, 90rem);
 	}
 </style>

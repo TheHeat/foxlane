@@ -1,14 +1,48 @@
 ---
-import { Icon } from "astro-icon/components";
-import Foxlogo from "./Foxlogo.astro";
+import Socials from "./socials.astro";
 ---
 
 <div class="wrapper">
 	<header>
-		<Icon
-			name="fox-logotype"
+		<svg
 			class="name"
-		/>
+			viewBox="0 0 167.13 33.44"
+		>
+			<path
+				d="M15.9,31.3c-1.91,1.77-4.5,2.14-6.95,2.14s-4.77-.32-6.68-1.86c-.95-.77-1.41-1.54-1.59-2C.14,28.44,0,27.08,0,25.89V7.9C0,7.22-.13,4,2,2.09,3.18,1.04,5.41,0,9,0c4.63,0,7.09,1.91,8.04,3.77.5,1.04.73,2.04.73,4.27v17.85c0,2.04-.32,3.91-1.86,5.41ZM11.81,8.45c0-.18.14-1.64-.36-2.59-.27-.59-.95-1.41-2.45-1.41-.32,0-1.18.05-1.91.59-1.32.91-1.14,2.32-1.14,3.63v16.22c0,.95-.05,2.14.55,2.95.68.95,2.14.95,2.41.95s1.14-.05,1.86-.55c1.09-.77,1.04-2.04,1.04-3.23V8.45Z"
+			></path>
+			<path
+				d="M30.61,32.75l-5.68-24.03.5,24.03h-5.54V.68h7.59l5.77,23.53-.59-23.53h5.41v32.07h-7.45Z"
+			></path>
+			<path
+				d="M40.18,32.75V.68h15.54v4.86h-9.63v7.54h9.09v4.86h-9.09v9.86h10.09v4.95h-15.99Z"
+			></path>
+			<path
+				d="M68.5,5.63v8.04h9.18v4.77h-9.18v14.31h-5.95V.68h15.72v4.95h-9.77Z"
+			></path>
+			<path
+				d="M96.29,31.3c-1.91,1.77-4.5,2.14-6.95,2.14s-4.77-.32-6.68-1.86c-.95-.77-1.41-1.54-1.59-2-.55-1.14-.68-2.5-.68-3.68V7.9c0-.68-.14-3.91,2-5.81,1.18-1.04,3.41-2.09,7-2.09,4.63,0,7.09,1.91,8.04,3.77.5,1.04.73,2.04.73,4.27v17.85c0,2.04-.32,3.91-1.86,5.41ZM92.2,8.45c0-.18.14-1.64-.36-2.59-.27-.59-.95-1.41-2.45-1.41-.32,0-1.18.05-1.91.59-1.32.91-1.14,2.32-1.14,3.63v16.22c0,.95-.05,2.14.55,2.95.68.95,2.14.95,2.41.95s1.14-.05,1.86-.55c1.09-.77,1.04-2.04,1.04-3.23V8.45Z"
+			></path>
+			<path
+				d="M112.15,32.75l-3.77-11.13-3.82,11.13h-6.41l7.09-17.08-6.31-14.99h6.45l3.04,9.04,3.09-9.04h6.45l-6.41,15.17,7.09,16.9h-6.5Z"
+			></path>
+			<path d="M123.48,19.38V.68h3.44v15.87h5.06v2.83h-8.5Z"></path>
+			<path
+				d="M140.78,19.38l-.45-3.05h-3.18l-.5,3.05h-3.44l3.63-18.7h3.95l3.5,18.7h-3.5ZM138.82,5.42l-1.24,8.03h2.38l-1.14-8.03Z"
+			></path>
+			<path
+				d="M151.88,19.38l-3.31-14.01.29,14.01h-3.23V.68h4.42l3.36,13.72-.34-13.72h3.15v18.7h-4.34Z"
+			></path>
+			<path
+				d="M157.81,19.38V.68h9.06v2.83h-5.62v4.4h5.3v2.83h-5.3v5.75h5.88v2.89h-9.32Z"
+			></path>
+			<rect
+				x="123.48"
+				y="23.84"
+				width="43.65"
+				height="4.46"
+			></rect>
+		</svg>
 		<svg
 			class="logo"
 			viewBox="0 0 119 119"
@@ -30,32 +64,79 @@ import Foxlogo from "./Foxlogo.astro";
 				d="M49.55,99.09l9.91,19.82,9.91-19.82h-19.82ZM0,0v39.64l14.86-9.91L0,0ZM118.91,0l-14.86,29.73,14.86,9.91V0Z"
 			></path>
 		</svg>
-		<Icon name="instagram" />
+		<div class="socials">
+			<Socials />
+		</div>
 	</header>
 </div>
 
 <style>
 	.wrapper {
-		padding: 2rem 1rem;
+		--unit: calc(var(--length-spacer) / 2);
+		@media (width > 40rem) {
+			padding-block: calc(var(--unit) * 2);
+			padding-inline: var(--unit);
+		}
+
+		a {
+			color: currentColor;
+		}
 	}
 	header {
 		display: grid;
-		grid-template-columns: 1fr 6rem 1fr;
+		gap: var(--unit);
+		grid-template-columns:
+			auto auto
+			1fr;
 		align-items: center;
+		padding: var(--unit);
 		background-color: var(--color-brand-500);
-		border-radius: 0.5rem;
-		padding: 1rem;
+
+		@media (width > 40rem) {
+			border-radius: 0.5rem;
+			grid-template-columns:
+				1fr
+				calc(var(--unit) * 6)
+				1fr;
+		}
+	}
+
+	.name,
+	.logo,
+	.socials {
+		grid-row: 1;
+		fill: var(--color-brand-100);
 	}
 
 	.logo {
 		display: block;
-		width: 6rem;
-		height: 6rem;
-		margin-block: -2rem;
+		grid-column: 1;
+		width: calc(var(--unit) * 3);
+		aspect-ratio: 1;
+		height: auto;
+		background-color: var(--color-brand-500);
+		@media (width > 40rem) {
+			width: calc(var(--unit) * 6);
+			margin-block: calc(var(--unit) * -2);
+			grid-column: 2;
+			background-color: transparent;
+		}
+	}
+	.name {
+		grid-column: 2;
+		@media (width > 40rem) {
+			grid-column: 1;
+		}
+	}
+	.name,
+	.instagram {
+		width: auto;
+		height: calc(var(--unit) * 2);
 	}
 
-	.name {
-		width: auto;
-		height: 2rem;
+	.socials {
+		grid-column: 3;
+		display: flex;
+		justify-content: flex-end;
 	}
 </style>
