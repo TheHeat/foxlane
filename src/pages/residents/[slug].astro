@@ -1,0 +1,51 @@
+---
+import type { SanityDocument } from "@sanity/client";
+import { sanityClient } from "sanity:client";
+import imageUrlBuilder from "@sanity/image-url";
+import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import { PortableText } from "astro-portabletext";
+import Layout from "../../layouts/Layout.astro";
+
+const POST_QUERY = `*[_type == "resident" && slug.current == $slug][0]`;
+const resident = await sanityClient.fetch<SanityDocument>(
+	POST_QUERY,
+	Astro.params
+);
+
+export async function getStaticPaths(): Promise<{ params: { slug: string } }> {
+	const SLUGS_QUERY = `*[_type == "resident" && defined(slug.current)]{
+    "params": {"slug": slug.current}
+  }`;
+	return await sanityClient.fetch(SLUGS_QUERY, Astro.params);
+}
+
+const { projectId, dataset } = sanityClient.config();
+const urlFor = (source: SanityImageSource) =>
+	projectId && dataset
+		? imageUrlBuilder({ projectId, dataset }).image(source)
+		: null;
+const residentImageUrl = resident.image
+	? urlFor(resident.image)?.width(500).height(500).url()
+	: null;
+---
+
+<Layout>
+	<a
+		href="/residents"
+		class="hover:underline"
+		>&larr; Back to residents</a
+	>
+	{
+		residentImageUrl && (
+			<img
+				src={residentImageUrl}
+				alt={resident.title}
+			/>
+		)
+	}
+	<h1>{resident.title}</h1>
+	<div>
+		<p>{new Date(resident.startDate).toLocaleDateString()}</p>
+		{Array.isArray(resident.body) && <PortableText value={resident.body} />}
+	</div>
+</Layout>
