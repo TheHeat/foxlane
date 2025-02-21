@@ -1,24 +1,37 @@
 ---
 import type { SanityDocument } from "@sanity/client";
 import { sanityClient } from "sanity:client";
+import ResidentTeaser from "./ResidentTeaser.astro";
 
 const RESIDENTS_QUERY = `*[
   _type == "resident"
   && defined(slug.current)
-]|order(title asc)[0...12]{_id, title, slug, startDate}`;
+]|order(title asc)[0...12]{_id, title, slug, image}`;
 
 const residents = await sanityClient.fetch<SanityDocument[]>(RESIDENTS_QUERY);
 ---
 
-<ul>
+<ul class="list">
 	{
 		residents.map((resident) => (
 			<li>
-				<a href={`/residents/${resident.slug.current}`}>
-					<h2>{resident.title}</h2>
-					{new Date(resident.startDate).toLocaleDateString()}
-				</a>
+				<ResidentTeaser resident={resident} />
 			</li>
 		))
 	}
 </ul>
+
+<style>
+	.list {
+		display: grid;
+		gap: var(--length-spacer);
+		grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+		list-style: none;
+		padding: 0;
+	}
+
+	li {
+		margin: 0;
+		padding: 0;
+	}
+</style>

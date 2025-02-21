@@ -3,8 +3,8 @@ import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 
 export default defineConfig({
-	name: "project-name",
-	title: "Project Name",
+	name: "fox-lane",
+	title: "Fox Lane",
 	projectId: "tsbiqnoe",
 	dataset: "production",
 	plugins: [structureTool()],
@@ -28,12 +28,6 @@ export default defineConfig({
 						name: "slug",
 						type: "slug",
 						options: { source: "title" },
-					},
-					{
-						name: "startDate",
-						type: "datetime",
-						initialValue: () => new Date().toISOString(),
-						validation: (rule) => rule.required(),
 					},
 					{
 						name: "image",

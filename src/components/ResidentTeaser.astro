@@ -1,0 +1,51 @@
+---
+import { sanityClient } from "sanity:client";
+import imageUrlBuilder from "@sanity/image-url";
+import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+
+const { resident } = Astro.props;
+const { projectId, dataset } = sanityClient.config();
+
+const urlFor = (source: SanityImageSource) =>
+	projectId && dataset
+		? imageUrlBuilder({ projectId, dataset }).image(source)
+		: null;
+
+const imageURL = resident.image
+	? urlFor(resident.image)?.width(500).height(500).url()
+	: null;
+---
+
+<div class="wrapper">
+	{
+		imageURL && (
+			<a href={`/residents/${resident.slug.current}`}>
+				<img
+					class="image"
+					src={imageURL}
+					alt={resident.title}
+				/>
+			</a>
+		)
+	}
+	<h2>
+		<a href={`/residents/${resident.slug.current}`}>
+			{resident.title}
+		</a>
+	</h2>
+</div>
+
+<style>
+	.wrapper {
+		background-color: var(--color-brand-100);
+		padding: 1rem;
+		border-radius: 0.25rem;
+	}
+
+	.image {
+		display: block;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 1;
+	}
+</style>
