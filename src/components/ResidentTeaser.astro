@@ -37,9 +37,15 @@ const imageURL = resident.image
 
 <style>
 	.wrapper {
-		background-color: var(--color-brand-100);
-		padding: 1rem;
+		--color-surface: var(--color-brand-100);
+		--color-text: var(--color-brand-500);
+
+		background-color: var(--color-surface);
+		color: var(--color-text);
+		padding: 0.5rem;
 		border-radius: 0.25rem;
+		display: grid;
+		gap: 0.5rem;
 	}
 
 	.image {
@@ -47,5 +53,13 @@ const imageURL = resident.image
 		width: 100%;
 		height: auto;
 		aspect-ratio: 1;
+	}
+	h2 {
+		margin: 0;
+	}
+
+	a {
+		color: currentColor;
+		text-decoration: none;
 	}
 </style>

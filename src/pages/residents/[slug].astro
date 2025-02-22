@@ -30,22 +30,63 @@ const residentImageUrl = resident.image
 ---
 
 <Layout>
-	<a
-		href="/residents"
-		class="hover:underline"
-		>&larr; Back to residents</a
-	>
-	{
-		residentImageUrl && (
-			<img
-				src={residentImageUrl}
-				alt={resident.title}
-			/>
-		)
-	}
-	<h1>{resident.title}</h1>
-	<div>
-		<p>{new Date(resident.startDate).toLocaleDateString()}</p>
-		{Array.isArray(resident.body) && <PortableText value={resident.body} />}
+	<div class="resident-grid-wrapper">
+		<div class="resident-grid">
+			<div class="main">
+				<h1>{resident.title}</h1>
+
+				<PortableText value={resident.body} />
+			</div>
+
+			<div class="sidebar">
+				{
+					residentImageUrl && (
+						<img
+							src={residentImageUrl}
+							alt={resident.title}
+						/>
+					)
+				}
+			</div>
+		</div>
 	</div>
 </Layout>
+<style>
+	.resident-grid-wrapper {
+		grid-column: content;
+	}
+	.resident-grid {
+		display: grid;
+		gap: var(--length-spacer);
+	}
+
+	.main {
+		grid-row: 2;
+	}
+
+	.sidebar {
+		grid-row: 1;
+	}
+
+	@media (width > 40rem) {
+		.resident-grid {
+			grid-template-columns: 1fr min(30vw, 20rem);
+		}
+		.main {
+			grid-row: 1;
+			grid-column: 1;
+		}
+
+		.sidebar {
+			grid-row: 1;
+			grid-column: 2;
+		}
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		background-color: var(--color-text);
+	}
+</style>

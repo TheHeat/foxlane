@@ -23,11 +23,15 @@ const residents = await sanityClient.fetch<SanityDocument[]>(RESIDENTS_QUERY);
 
 <style>
 	.list {
+		grid-column: content;
 		display: grid;
-		gap: var(--length-spacer);
-		grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+		gap: 1rem;
 		list-style: none;
 		padding: 0;
+
+		@media (width > 30rem) {
+			grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+		}
 	}
 
 	li {
