@@ -16,6 +16,19 @@ import Header from "../components/Header.astro";
 			type="image/svg+xml"
 			href="/favicon.svg"
 		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap"
+			rel="stylesheet"
+		/>
 		<meta
 			name="generator"
 			content={Astro.generator}
@@ -32,8 +45,6 @@ import Header from "../components/Header.astro";
 </html>
 
 <style is:global>
-	@import url("https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap");
-
 	:root {
 		--color-brand-100: #f2f1df;
 		--color-brand-200: #f29979;
