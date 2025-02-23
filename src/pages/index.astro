@@ -1,5 +1,7 @@
 ---
 import Hero from "../components/Hero.astro";
+import Map from "../components/Map.astro";
+
 import Residents from "../components/Residents.astro";
 import Layout from "../layouts/Layout.astro";
 
@@ -8,6 +10,16 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Hero />
-	<Residents />
+	<div class="wrapper">
+		<Hero />
+		<Residents />
+		<Map />
+	</div>
 </Layout>
+
+<style>
+	.wrapper {
+		grid-column: content;
+		gap: var(--length-spacer);
+	}
+</style>
