@@ -1,5 +1,5 @@
 ---
-import Socials from "./socials.astro";
+import Links from "./Links.astro";
 ---
 
 <div class="wrapper">
@@ -72,15 +72,16 @@ import Socials from "./socials.astro";
 				></path>
 			</svg>
 		</a>
-		<div class="socials">
-			<a href="/bookings">Book</a>
-			<Socials />
+		<div class="links">
+			<Links />
 		</div>
 	</header>
 </div>
 
 <style>
 	.wrapper {
+		--color-text: var(--color-brand-100);
+		--color-surface: var(--color-brand-500);
 		grid-column: full-width;
 		--unit: calc(var(--length-spacer) / 2);
 		background-image: linear-gradient(
@@ -92,10 +93,6 @@ import Socials from "./socials.astro";
 			padding-block: var(--length-spacer);
 			position: sticky;
 			top: 0;
-		}
-
-		a {
-			color: currentColor;
 		}
 	}
 	header {
@@ -119,7 +116,7 @@ import Socials from "./socials.astro";
 
 	.name,
 	.logo-link,
-	.socials {
+	.links {
 		grid-row: 1;
 	}
 
@@ -155,7 +152,7 @@ import Socials from "./socials.astro";
 		height: calc(var(--unit) * 2);
 	}
 
-	.socials {
+	.links {
 		grid-column: 3;
 		display: flex;
 		justify-content: flex-end;
