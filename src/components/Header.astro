@@ -73,6 +73,7 @@ import Socials from "./socials.astro";
 			</svg>
 		</a>
 		<div class="socials">
+			<a href="/bookings">Book</a>
 			<Socials />
 		</div>
 	</header>
@@ -83,8 +84,8 @@ import Socials from "./socials.astro";
 		grid-column: full-width;
 		--unit: calc(var(--length-spacer) / 2);
 		background-image: linear-gradient(
-			var(--color-brand-300) var(--length-spacer),
-			transparent
+			var(--color-brand-300) 50%,
+			transparent 50%
 		);
 		@media (width > 40rem) {
 			grid-column: breakout;

@@ -28,6 +28,7 @@ export default defineConfig({
 						name: "slug",
 						type: "slug",
 						options: { source: "title" },
+						default: { source: "title" },
 					},
 					{
 						name: "image",
@@ -52,6 +53,14 @@ export default defineConfig({
 					},
 					{
 						name: "facebook",
+						type: "url",
+					},
+					{
+						name: "etsy",
+						type: "url",
+					},
+					{
+						name: "eventbrite",
 						type: "url",
 					},
 				],

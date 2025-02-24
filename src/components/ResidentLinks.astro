@@ -1,0 +1,106 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { instagram, etsy, eventbrite, linkedIn, website } = Astro.props.resident;
+
+const websiteURL = website ? new URL(website) : null;
+const websiteString = websiteURL ? websiteURL.hostname : null;
+---
+
+<div class="wrapper">
+	{
+		website && (
+			<a
+				class="website"
+				href={website}
+			>
+				{websiteString}
+			</a>
+		)
+	}
+
+	<div class="socials">
+		{
+			instagram && (
+				<a
+					href={instagram}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Icon
+						size="2rem"
+						name="instagram"
+					/>
+				</a>
+			)
+		}
+
+		{
+			linkedIn && (
+				<a
+					href={linkedIn}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Icon
+						size="2rem"
+						name="linkedin"
+					/>
+				</a>
+			)
+		}
+
+		{
+			etsy && (
+				<a
+					href={etsy}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Icon
+						size="2rem"
+						name="etsy"
+					/>
+				</a>
+			)
+		}
+		{
+			eventbrite && (
+				<a
+					href={eventbrite}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Icon
+						size="2rem"
+						name="eventbrite"
+					/>
+				</a>
+			)
+		}
+	</div>
+</div>
+<style>
+	.wrapper {
+		display: grid;
+		gap: 0.5rem;
+	}
+	.website {
+		line-height: 1;
+		width: fit-content;
+		background-color: var(--color-text);
+		color: var(--color-surface);
+		text-decoration: none;
+		padding: 0.25rem 0.5rem;
+		border-radius: 0.25rem;
+		margin-bottom: 0.5rem;
+		font-weight: 600;
+	}
+	.socials {
+		display: flex;
+		gap: 0.5rem;
+	}
+	a {
+		color: currentColor;
+	}
+</style>

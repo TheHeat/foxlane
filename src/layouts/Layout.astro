@@ -73,9 +73,8 @@ import Header from "../components/Header.astro";
 	}
 
 	.grid {
-		min-height: 100vh;
 		--padding-inline: 1rem;
-		--content-max-width: 85rem;
+		--content-max-width: 80rem;
 		--breakout-max-width: 100rem;
 		--breakout-size: calc(
 			(var(--breakout-max-width) - var(--content-max-width)) / 2
@@ -83,6 +82,7 @@ import Header from "../components/Header.astro";
 
 		display: grid;
 		row-gap: var(--length-spacer);
+		padding-block-end: var(--length-spacer);
 		grid-template-rows: min-content;
 		grid-template-columns:
 			[full-width-start] minmax(var(--padding-inline), 1fr)
