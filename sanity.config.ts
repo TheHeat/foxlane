@@ -40,8 +40,10 @@ export default defineConfig({
 						of: [{ type: "block" }],
 					},
 					{
-						name: "website",
-						type: "url",
+						name: "websites",
+						title: "Websites",
+						type: "array",
+						of: [{ type: "url" }],
 					},
 					{
 						name: "instagram",
