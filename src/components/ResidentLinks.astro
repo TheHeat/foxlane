@@ -2,14 +2,14 @@
 import { Icon } from "astro-icon/components";
 import { map } from "astro:schema";
 
-const { instagram, etsy, eventbrite, linkedIn, websites } =
+const { instagram, etsy, eventbrite, linkedIn, facebook, websites } =
 	Astro.props.resident;
 
 Array.isArray(websites);
 
 const websitesList =
 	websites && websites.length > 0
-		? websites.map((website: string | URL) => {
+		? websites.map((website: URL) => {
 				const websiteURL = website ? new URL(website) : null;
 				const websiteString = websiteURL ? websiteURL.hostname : null;
 
@@ -20,7 +20,7 @@ const websitesList =
 
 <div class="wrapper">
 	{
-		websitesList.map((website) => (
+		websitesList.map((website: { websiteURL: URL; websiteString: string }) => (
 			<a
 				class="website"
 				href={website.websiteURL}
@@ -56,6 +56,21 @@ const websitesList =
 					<Icon
 						size="2rem"
 						name="linkedin"
+					/>
+				</a>
+			)
+		}
+
+		{
+			facebook && (
+				<a
+					href={facebook}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<Icon
+						size="2rem"
+						name="facebook"
 					/>
 				</a>
 			)
