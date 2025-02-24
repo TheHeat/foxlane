@@ -1,162 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 655.05 655.05">
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 655.05 655.05">
   <defs>
     <style>
-      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+
+
+      .main-road, .arrow-helper, .main-road, .cls-4, .arrow-line, .cls-6, .cls-7 {
         fill: none;
       }
 
-      .cls-2 {
-        stroke-linejoin: bevel;
-      }
-
-      .cls-2, .cls-4 {
+      .main-road {
         stroke-width: 50px;
       }
 
-      .cls-2, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+      .main-road,  .cls-4, .arrow-line, .cls-6, .cls-7 {
         stroke: #f2f1df;
       }
 
-      .cls-3 {
+      .arrow-helper {
         stroke: #bf4d34;
         stroke-width: 9px;
       }
 
-      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
-        stroke-miterlimit: 10;
-      }
-
-      .cls-10, .cls-11 {
+      .label-main-road, .cls-9 {
         fill: #bf4d34;
       }
 
-      .cls-10, .cls-12 {
+      .label-main-road, .label {
         font-family: Arial-BoldMT, Arial;
         font-size: 16px;
         font-weight: 700;
       }
 
-      .cls-13 {
+      .building {
         fill: #400101;
       }
 
-      .cls-5 {
+      .cls-4 {
         stroke-width: 21px;
       }
 
-      .cls-14 {
-        clip-path: url(#clippath-1);
-      }
-
-      .cls-6 {
+      .arrow-line {
         stroke-width: 3px;
       }
 
-      .cls-7 {
+      .cls-6 {
         stroke-width: 10px;
       }
 
-      .cls-8 {
+      .cls-7 {
         stroke-width: 5.42px;
       }
 
-      .cls-9 {
-        stroke-width: 5px;
-      }
-
-      .cls-12, .cls-15 {
+      .label, .arrow-pointer {
         fill: #f2f1df;
       }
 
-      .cls-16 {
-        letter-spacing: -.09em;
-      }
-
-      .cls-17 {
-        letter-spacing: -.02em;
-      }
-
-      .cls-18 {
-        letter-spacing: -.06em;
-      }
-
-      .cls-19 {
-        clip-path: url(#clippath);
-      }
     </style>
-    <clipPath id="clippath">
-      <circle class="cls-1" cx="118.62" cy="244.77" r="70.12"/>
-    </clipPath>
-    <clipPath id="clippath-1">
-      <rect class="cls-1" x="33.78" y="159.92" width="169.68" height="169.68"/>
-    </clipPath>
   </defs>
   <g id="Layer_1-2" data-name="Layer 1">
-    <rect class="cls-11" width="655.05" height="655.05"/>
-    <polygon class="cls-13" points="226.52 299.03 269.78 330.84 299.98 280.59 273.02 273.07 226.52 299.03"/>
-    <g>
-      <path class="cls-4" d="M604.93,103.39c-97.56,35.13-277.24,81.41-530.67,71.93"/>
-      <line class="cls-2" x1="389.63" y1="157.46" x2="258.94" y2="552.6"/>
-      <line class="cls-2" x1="604.92" y1="506.21" x2="389.63" y2="157.46"/>
-      <polyline class="cls-7" points="204.47 371.69 229.14 298.5 270.62 274.92 335.08 283.47"/>
-      <line class="cls-5" x1="299.98" y1="399.78" x2="195.97" y2="368.85"/>
-      <line class="cls-5" x1="171.56" y1="454.21" x2="263.55" y2="485.15"/>
-      <line class="cls-5" x1="349.9" y1="321.86" x2="488.19" y2="485.15"/>
-      <line class="cls-5" x1="458.84" y1="297.52" x2="383.47" y2="361.5"/>
-      <line class="cls-5" x1="273.02" y1="530.79" x2="322.63" y2="558.26"/>
-      <line class="cls-5" x1="357.36" y1="465.37" x2="305.94" y2="432.68"/>
-      <line class="cls-5" x1="178.59" y1="165.55" x2="43.47" y2="88.17"/>
+    <rect id="ground" class="cls-9" width="655.05" height="655.05"/>
+    <g id="roads">
+      <path class="main-road" d="M604.93,103.39c-97.56,35.13-277.24,81.41-530.67,71.93"/>
+      <line class="main-road" x1="389.63" y1="157.46" x2="258.94" y2="552.6"/>
+      <line class="main-road" x1="604.92" y1="506.21" x2="389.63" y2="157.46"/>
+      <polyline class="cls-6" points="204.64 374.86 225.32 300.67 270.62 274.92 335.08 283.47"/>
+      <line class="cls-4" x1="299.98" y1="399.78" x2="195.97" y2="368.85"/>
+      <line class="cls-4" x1="171.56" y1="454.21" x2="263.55" y2="485.15"/>
+      <line class="cls-4" x1="349.9" y1="321.86" x2="488.19" y2="485.15"/>
+      <line class="cls-4" x1="458.84" y1="297.52" x2="383.47" y2="361.5"/>
+      <line class="cls-4" x1="273.02" y1="530.79" x2="322.63" y2="558.26"/>
+      <line class="cls-4" x1="357.36" y1="465.37" x2="305.94" y2="432.68"/>
+      <line class="cls-4" x1="178.59" y1="165.55" x2="43.47" y2="88.17"/>
     </g>
-    <text class="cls-10" transform="translate(457.35 151.88) rotate(-15.4)"><tspan x="0" y="0">NEWPORT ROAD</tspan></text>
-    <text class="cls-10" transform="translate(481.36 314.84) rotate(58.24)"><tspan x="0" y="0">BERESFORD ROAD</tspan></text>
-    <text class="cls-10" transform="translate(317.82 395.42) rotate(-70.5)"><tspan x="0" y="0">BROAD</tspan><tspan class="cls-18" x="58.66" y="0">W</tspan><tspan class="cls-16" x="72.88" y="0">A</tspan><tspan class="cls-17" x="82.97" y="0">Y</tspan></text>
-    <text class="cls-12" transform="translate(235.83 250.93) rotate(11.21)"><tspan x="0" y="0">FOX LANE</tspan></text>
-    <text class="cls-12" transform="translate(201.87 404.49) rotate(16.64)"><tspan x="0" y="0">FORT ST</tspan></text>
-    <text class="cls-12" transform="translate(413.28 363.6) rotate(50.8)"><tspan x="0" y="0">BLANCHE ST</tspan></text>
-    <g>
-      <line class="cls-9" x1="118.62" y1="244.77" x2="219.2" y2="279.86"/>
-      <polygon class="cls-15" points="196.82 293.71 194.8 289.13 217.38 279.23 205.86 257.43 210.29 255.1 224.32 281.65 196.82 293.71"/>
+    <g id="arrow_helpers" data-name="arrow helpers">
+      <line id="helper-to-door-shop" class="arrow-helper" x1="333.45" y1="135.1" x2="329.65" y2="195.99"/>
+      <line id="helper-to-royal-oak" class="arrow-helper" x1="471.47" y1="231.71" x2="413.15" y2="249.63"/>
     </g>
-    <g>
-      <line class="cls-6" x1="224.32" y1="122.98" x2="94.06" y2="67.83"/>
-      <polygon class="cls-15" points="108 60.4 109.02 63.23 95.12 68.27 101.17 81.77 98.43 83 91.06 66.56 108 60.4"/>
+    <g id="buildings">
+      <polygon class="building" points="232.38 302.73 269.78 330.84 291.38 282.73 271.38 279.73 232.38 302.73"/>
+      <polygon class="building" points="376.6 274.4 418.79 319.59 445.68 295.48 396.83 215.19 376.6 274.4"/>
+      <polygon class="building" points="292.63 195.36 335.08 243.49 353.47 187.74 292.63 195.36"/>
     </g>
-    <text class="cls-12" transform="translate(131 70.75) rotate(21.79)"><tspan x="0" y="0">ALBAN</tspan><tspan class="cls-17" x="55.99" y="0">Y</tspan><tspan x="66.38" y="0" xml:space="preserve"> RD</tspan></text>
-    <line class="cls-3" x1="471.47" y1="231.71" x2="413.15" y2="249.63"/>
-    <polygon class="cls-13" points="376.6 274.4 418.79 319.59 445.68 295.48 396.83 215.19 376.6 274.4"/>
-    <g>
+    <g id="arrows">
+      <g id="to-door-shop">
+        <g>
+          <line class="arrow-line" x1="336.05" y1="93.43" x2="328.9" y2="207.89"/>
+          <path class="arrow-pointer" d="M323.29,207.26c-.19,3.11,2.17,5.79,5.28,5.98,3.11.19,5.79-2.17,5.98-5.28.19-3.11-2.17-5.79-5.28-5.98-3.11-.19-5.79,2.17-5.98,5.28Z"/>
+        </g>
+      </g>
+      <g id="to-clifton-st">
+        <g>
+          <line class="arrow-line" x1="394.16" y1="492.89" x2="351.09" y2="602.7"/>
+          <polygon class="arrow-pointer" points="343.3 588.97 346.09 587.86 351.51 601.63 364.84 595.22 366.14 597.93 349.9 605.73 343.3 588.97"/>
+        </g>
+      </g>
+      <g id="to-albany-rd">
+        <g>
+          <line class="arrow-line" x1="224.32" y1="122.98" x2="94.06" y2="67.83"/>
+          <polygon class="arrow-pointer" points="108 60.4 109.02 63.23 95.12 68.27 101.17 81.77 98.43 83 91.06 66.56 108 60.4"/>
+        </g>
+      </g>
+      <g id="to-foxys">
+        <g>
+          <line class="arrow-line" x1="118.62" y1="244.77" x2="258.91" y2="301.23"/>
+          <path class="arrow-pointer" d="M256.54,306.36c2.89,1.16,6.17-.24,7.34-3.13s-.24-6.17-3.13-7.34c-2.89-1.16-6.17.24-7.34,3.13s.24,6.17,3.13,7.34Z"/>
+        </g>
+      </g>
+      <g id="to-royal-oak">
+        <g>
+          <line class="arrow-line" x1="537.7" y1="211.35" x2="401.75" y2="253.13"/>
+          <path class="arrow-pointer" d="M400.37,247.65c-2.98.91-4.65,4.07-3.73,7.05.91,2.98,4.07,4.65,7.05,3.73,2.98-.91,4.65-4.07,3.73-7.05-.91-2.98-4.07-4.65-7.05-3.73Z"/>
+        </g>
+      </g>
+    </g>
+    <g id="fox">
+      <circle class="cls-9" cx="118.62" cy="244.77" r="66.31"/>
       <g>
-        <line class="cls-6" x1="394.16" y1="492.89" x2="351.09" y2="602.7"/>
-        <polygon class="cls-15" points="343.3 588.97 346.09 587.86 351.51 601.63 364.84 595.22 366.14 597.93 349.9 605.73 343.3 588.97"/>
+        <path class="building" d="M166.14,197.25l-11.88,23.76-27.72,55.44h-15.84l-39.6-79.2c-12.16,12.16-19.68,28.96-19.68,47.52,0,37.11,30.09,67.2,67.2,67.2s67.2-30.09,67.2-67.2c0-18.56-7.52-35.36-19.68-47.52"/>
+        <path class="arrow-pointer" d="M82.98,221.01l35.64,71.28-47.52-63.36,11.88-7.92ZM118.62,292.28l47.52-63.36-11.88-7.92-35.64,71.28Z"/>
       </g>
-      <text class="cls-12" transform="translate(350.12 577.1) rotate(-69.74)"><tspan x="0" y="0">CLIF</tspan><tspan class="cls-17" x="35.55" y="0">T</tspan><tspan x="45.03" y="0">ON ST</tspan></text>
+      <circle class="cls-7" cx="118.62" cy="244.77" r="66.31"/>
     </g>
-    <g class="cls-19">
-      <circle class="cls-11" cx="118.62" cy="244.77" r="66.31"/>
-      <g class="cls-14">
-        <path class="cls-13" d="M166.14,197.25l-11.88,23.76-27.72,55.44h-15.84l-39.6-79.2c-12.16,12.16-19.68,28.96-19.68,47.52,0,37.11,30.09,67.2,67.2,67.2s67.2-30.09,67.2-67.2c0-18.56-7.52-35.36-19.68-47.52"/>
-        <path class="cls-15" d="M82.98,221.01l35.64,71.28-47.52-63.36,11.88-7.92ZM118.62,292.28l47.52-63.36-11.88-7.92-35.64,71.28Z"/>
-        <rect class="cls-1" x="33.78" y="159.92" width="169.68" height="169.68"/>
-      </g>
-      <circle class="cls-8" cx="118.62" cy="244.77" r="66.31"/>
-    </g>
-    <text class="cls-12" transform="translate(162.57 489.84) rotate(15.3)"><tspan x="0" y="0">TYLER ST</tspan></text>
-    <g>
-      <text class="cls-12" transform="translate(490.85 247.99) rotate(-17.22)"><tspan x="0" y="0">RO</tspan><tspan class="cls-16" x="24" y="0">Y</tspan><tspan x="33.2" y="0">A</tspan><tspan class="cls-17" x="44.76" y="0">L</tspan><tspan x="0" y="19.2">OAK</tspan></text>
-      <g>
-        <line class="cls-6" x1="537.7" y1="211.35" x2="399.74" y2="253.75"/>
-        <polygon class="cls-15" points="405.64 239.1 408.24 240.6 400.84 253.41 414.16 259.85 412.85 262.55 396.63 254.7 405.64 239.1"/>
-      </g>
-    </g>
-    <line class="cls-3" x1="333.45" y1="135.1" x2="329.65" y2="195.99"/>
-    <polygon class="cls-13" points="292.63 195.36 335.08 243.49 353.47 187.74 292.63 195.36"/>
-    <g>
-      <text class="cls-12" transform="translate(348.63 105.08) rotate(-4.12)"><tspan x="0" y="0">DOOR</tspan><tspan x="0" y="19.2">SHO</tspan><tspan class="cls-17" x="34.67" y="19.2">P</tspan></text>
-      <g>
-        <line class="cls-6" x1="335.53" y1="101.72" x2="328.77" y2="209.99"/>
-        <polygon class="cls-15" points="317.15 199.3 319.47 197.4 328.84 208.84 339.57 198.65 341.63 200.83 328.57 213.24 317.15 199.3"/>
-      </g>
+    <g id="labels">
+      <text class="label" transform="translate(235.83 250.93) rotate(11.21)"><tspan x="0" y="0">FOX LANE</tspan></text>
+      <text class="label" transform="translate(201.87 404.49) rotate(16.64)"><tspan x="0" y="0">FORT ST</tspan></text>
+      <text class="label" transform="translate(413.28 363.6) rotate(50.8)"><tspan x="0" y="0">BLANCHE ST</tspan></text>
+      <text class="label" transform="translate(162.57 489.84) rotate(15.3)"><tspan x="0" y="0">TYLER ST</tspan></text>
+      <text class="label" transform="translate(490.85 247.99) rotate(-17.22)"><tspan x="0" y="0">ROYAL</tspan><tspan x="0" y="19.2">OAK</tspan></text>
+      <text class="label" transform="translate(350.12 577.1) rotate(-69.74)"><tspan x="0" y="0">CLIFTON ST</tspan></text>
+      <text class="label" transform="translate(348.63 105.08) rotate(-4.12)"><tspan x="0" y="0">DOOR</tspan><tspan x="0" y="19.2">SHOP</tspan></text>
+      <text class="label" transform="translate(131 70.75) rotate(21.79)"><tspan x="0" y="0">ALBANY RD</tspan></text>
+      <text class="label-main-road" transform="translate(457.35 151.88) rotate(-15.4)"><tspan x="0" y="0">NEWPORT ROAD</tspan></text>
+      <text class="label-main-road" transform="translate(481.36 314.84) rotate(58.24)"><tspan x="0" y="0">BERESFORD ROAD</tspan></text>
+      <text class="label-main-road" transform="translate(317.82 395.42) rotate(-70.5)"><tspan x="0" y="0">BROADWAY</tspan></text>
     </g>
   </g>
 </svg>
