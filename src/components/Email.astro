@@ -1,0 +1,115 @@
+---
+
+---
+
+<form
+	name="contact"
+	method="POST"
+	data-netlify="true"
+>
+	<input
+		type="hidden"
+		name="form-name"
+		value="contact"
+	/>
+	<div class="field-wrapper">
+		<label for="name">Name:</label>
+		<input
+			type="text"
+			id="name"
+			name="name"
+			required
+		/>
+	</div>
+	<div class="field-wrapper">
+		<label for="email">Email:</label>
+		<input
+			type="email"
+			id="email"
+			name="email"
+			required
+		/>
+	</div>
+	<div class="field-wrapper">
+		<label>Interests:</label>
+		<ul class="options">
+			<li class="option">
+				<input
+					type="checkbox"
+					id="common-room"
+					name="interests"
+					value="Common Room"
+				/>
+				<label for="common-room">Common Room</label>
+			</li>
+			<li class="option">
+				<input
+					type="checkbox"
+					id="yard"
+					name="interests"
+					value="Yard"
+				/>
+				<label for="yard">Yard</label>
+			</li>
+		</ul>
+	</div>
+	<div class="field-wrapper">
+		<label for="message">Message:</label>
+		<textarea
+			id="message"
+			name="message"
+			required
+		></textarea>
+	</div>
+	<div>
+		<button type="submit">Submit</button>
+	</div>
+</form>
+
+<style>
+	form {
+		display: grid;
+		gap: 1rem;
+		max-width: 50rem;
+	}
+	label {
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+	input,
+	textarea {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0.5rem;
+		border: 1px solid #ccc;
+		border-radius: 0.25rem;
+	}
+	.field-wrapper {
+		display: grid;
+		gap: 0.5rem;
+	}
+	textarea {
+		min-height: 10rem;
+	}
+	button {
+		padding: 0.5rem 1rem;
+		border: none;
+		border-radius: 0.25rem;
+	}
+
+	.options {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.option {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	[type="checkbox"] {
+		max-width: 1.5rem;
+		flex-grow: 0;
+	}
+</style>
