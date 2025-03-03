@@ -30,14 +30,23 @@
 			required
 		/>
 	</div>
+
 	<div class="field-wrapper">
-		<label>Interests:</label>
+		<label for="date">Date:</label>
+		<input
+			type="date"
+			id="date"
+			name="date"
+		/>
+	</div>
+	<div class="field-wrapper">
+		<label>Which space are you interested in hiring?</label>
 		<ul class="options">
 			<li class="option">
 				<input
 					type="checkbox"
 					id="common-room"
-					name="interests"
+					name="spaces"
 					value="Common Room"
 				/>
 				<label for="common-room">Common Room</label>
@@ -46,7 +55,7 @@
 				<input
 					type="checkbox"
 					id="yard"
-					name="interests"
+					name="spaces"
 					value="Yard"
 				/>
 				<label for="yard">Yard</label>
@@ -71,6 +80,7 @@
 		display: grid;
 		gap: 1rem;
 		max-width: 50rem;
+		accent-color: var(--color-accent);
 	}
 	label {
 		display: block;
@@ -83,6 +93,13 @@
 		padding: 0.5rem;
 		border: 1px solid #ccc;
 		border-radius: 0.25rem;
+		background-color: var(--color-text);
+		color: var(--color-brand-500);
+		font-family: inherit;
+		font-size: inherit;
+		&:focus {
+			background-color: white;
+		}
 	}
 	.field-wrapper {
 		display: grid;
@@ -92,9 +109,13 @@
 		min-height: 10rem;
 	}
 	button {
+		font-size: inherit;
+		font-weight: 600;
+		letter-spacing: 0.02em;
 		padding: 0.5rem 1rem;
 		border: none;
 		border-radius: 0.25rem;
+		background-color: var(--color-accent);
 	}
 
 	.options {

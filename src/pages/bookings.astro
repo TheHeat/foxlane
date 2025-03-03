@@ -5,14 +5,27 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
 	<div class="page-grid">
-		<h1>Bookings</h1>
-		<p>We have two spaces available to hire - the common room and the yard.</p>
-		<Email />
+		<div class="main">
+			<h1>Bookings</h1>
+			<p>
+				We have two spaces available to hire - the common room and the yard.
+			</p>
+		</div>
+		<div class="side">
+			<h2>Make a booking enquiry</h2>
+			<Email />
+		</div>
 	</div>
 
 	<style>
 		.page-grid {
 			grid-column: content;
+
+			@media (width > 50rem) {
+				display: grid;
+				grid-template-columns: 2fr 1fr;
+				gap: var(--length-spacer);
+			}
 		}
 	</style>
 </Layout>

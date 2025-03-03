@@ -1,3 +1,10 @@
+---
+import Map from "./Map.astro";
+---
+
+<div class="map-wrapper">
+	<Map />
+</div>
 <footer>
 	<div class="credit">
 		Handmade with &hearts; by <a href="https://marcheatleydesign.com">MHD</a>
@@ -5,6 +12,11 @@
 </footer>
 
 <style>
+	.map-wrapper {
+		padding: var(--length-spacer);
+		margin: auto;
+		max-width: var(--length-content-max-width);
+	}
 	footer {
 		position: sticky;
 		top: 100%;
